@@ -1,0 +1,27 @@
+name: WarPlugin
+main: ItsGabry\WarPlugin\Main
+api: 3.9.3
+version: 1.0
+author: ItsGabry
+
+commands:
+ war:
+  description: Allows players to enter the war world
+  usage: "/war"
+  aliases: [wr, wa]
+  permission: war.command
+ unwar:
+  descrpition: Allows players to exit the war world
+  usage: "/unwar"
+  aliases: [unwr, unwa]
+  permission: unwar.command
+permissions:
+ war.command:
+  description: "Allows players to enter the war world"
+  default: op
+ unwar.command:
+  description: "Allows players to exit the war world"
+  default: true
+ war.bypass:
+  description: "Allow players to be able to execute commands in the war world"
+  default: op

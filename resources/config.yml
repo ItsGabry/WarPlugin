@@ -1,0 +1,4 @@
+#Mondo in cui saranno teletrasportati i giocatori quando fanno /war
+War: WarWorld 
+#Mondo in cui saranno teletrasportati i giocatori quando fanno /unwar
+Unwar: world
