@@ -40,6 +40,7 @@ class Main extends PluginBase implements Listener {
                         $sender->teleport($this->getServer()->getLevelByName($this->getConfig()->get("War"))->getSpawnLocation());
                         $sender->addTitle(TextFormat::RED . "Benvenuto nell'arena War");
                         return true;
+                        break;
 
                     }
                 }
@@ -48,6 +49,7 @@ class Main extends PluginBase implements Listener {
                     $sender->teleport($this->getServer()->getLevelByName($this->getConfig()->get("Unwar"))->getSpawnLocation());
                     $sender->addTitle(TextFormat::GOLD . "Sei uscito dall'arena war");
                     return true;
+                    break;
                 }
 
         }
