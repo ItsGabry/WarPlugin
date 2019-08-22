@@ -59,7 +59,6 @@ class Main extends PluginBase implements Listener {
      public function nanotechs(PlayerCommandPreprocessEvent $event) {
         $message = $event->getMessage();
         $inizio  = mb_substr($message,0,1 );
-        var_dump($inizio);
         if ($inizio == "/" or ".") {
             if ($message != "/unwar") {
                 if ($event->getPlayer()->getLevel()->getName() == $this->getConfig()->get("War")) {
