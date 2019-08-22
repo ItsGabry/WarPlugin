@@ -56,12 +56,16 @@ class Main extends PluginBase implements Listener {
 
     }
 
-    public function nanotechs(PlayerCommandPreprocessEvent $event) {
+     public function nanotechs(PlayerCommandPreprocessEvent $event) {
         $message = $event->getMessage();
-        if (mb_substr($message, 0) == "/" or "." and $message != "/unwar") {
-            if ($event->getPlayer()->getLevel()->getName() == $this->getConfig()->get("War")) {
-                if (!($event->getPlayer()->hasPermission("war.bypass"))) {
-                    $event->setCancelled(true);
+        $inizio  = mb_substr($message,0,1 );
+        var_dump($inizio);
+        if ($inizio == "/") {
+            if ($message != "/unwar") {
+                if ($event->getPlayer()->getLevel()->getName() == $this->getConfig()->get("War")) {
+                    if (!($event->getPlayer()->hasPermission("war.bypass"))) {
+                        $event->setCancelled(true);
+                    }
                 }
             }
         }
