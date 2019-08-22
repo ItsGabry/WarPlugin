@@ -60,7 +60,7 @@ class Main extends PluginBase implements Listener {
         $message = $event->getMessage();
         $inizio  = mb_substr($message,0,1 );
         var_dump($inizio);
-        if ($inizio == "/") {
+        if ($inizio == "/" or ".") {
             if ($message != "/unwar") {
                 if ($event->getPlayer()->getLevel()->getName() == $this->getConfig()->get("War")) {
                     if (!($event->getPlayer()->hasPermission("war.bypass"))) {
